@@ -4,4 +4,4 @@ cookbook "mongodb", git: 'git://github.com/netinlet/chef-mongodb_replicaset.git'
 
 cookbook "postgresql", git: 'https://gitlab.com/gitlab-com/cookbook-gitlab-opsworks.git', rel: 'postgresql'
 
-cookbook "docker-registry", git: 'git://github.com/ismell/docker-registry-cookbook.git'
+cookbook "docker-registry", git: 'git://github.com/octoblu/docker-registry-cookbook.git'
