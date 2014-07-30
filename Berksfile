@@ -1,5 +1,7 @@
 source "https://supermarket.getchef.com"
 
+
+cookbook "supervisor", git: 'git://github.com/poise/supervisor.git'
 cookbook "mongodb", git: 'git://github.com/netinlet/chef-mongodb_replicaset.git', rel: 'mongodb'
 
 cookbook "postgresql", git: 'https://gitlab.com/gitlab-com/cookbook-gitlab-opsworks.git', rel: 'postgresql'
