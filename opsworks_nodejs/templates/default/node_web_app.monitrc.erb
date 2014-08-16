@@ -1,3 +1,3 @@
-check host node_web_app_<%= @application_name %> with address pidfile /var/run/<%= @application_name %>.pid
+check process node_web_app_<%= @application_name %> with pidfile /var/run/<%= @application_name %>.pid
   start program = "/bin/sh -c 'cd <%= @deploy[:deploy_to] %>/current; /usr/bin/env NODE_PATH=<%= @deploy[:deploy_to] %>/current/node_modules:<%= @deploy[:deploy_to] %>/current <% (node[:environment_variables] || {}).merge(@deploy[:environment_variables] || {}).each do |name,value| -%><%= name %>=<%= value %> <% end -%> npm start >> log/server.log'"
   stop program  = "/usr/bin/pkill -f 'coffee server.js'"
